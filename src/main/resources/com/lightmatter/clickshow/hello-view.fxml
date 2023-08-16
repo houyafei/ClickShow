@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lightmatter.clickshow.HelloController">
+    <padding>
+        <Insets left="20.0" right="20.0" top="30.0" />
+    </padding>
+
+    <Label contentDisplay="TOP" style="-fx-font-size: 30px;" text="我今日点击战绩报告" textAlignment="CENTER">
+      <font>
+         <Font name="System Bold" size="26.0" />
+      </font>
+      <textFill>
+         <RadialGradient centerX="0.4888888888888889" centerY="0.5" radius="0.5">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.34965887665748596" green="0.9210526347160339" blue="0.6067860722541809" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.3183479607105255" green="0.32773512601852417" blue="0.8815789222717285" opacity="0.8299999833106995" />
+                  </color>
+               </Stop>
+            </stops>
+         </RadialGradient>
+      </textFill></Label>
+
+    <HBox alignment="BASELINE_CENTER" spacing="20.0">
+        <padding>
+            <Insets left="20.0" right="20.0" top="20.0" />
+        </padding>
+        <Label style="-fx-font-size: 24px;" text="鼠标点击次数：" />
+        <Label fx:id="clickMouseText" style="-fx-font-size: 24px;" text=" 0 " textFill="#15e442">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+        <Label style="-fx-font-size: 24px;" text="键盘点击次数：" />
+        <Label fx:id="clickKeyboardText" style="-fx-font-size: 24px;" text=" 0 " textFill="#0bb92b">
+         <font>
+            <Font size="30.0" />
+         </font></Label>
+    </HBox>
+   <BarChart fx:id="barChart">
+     <xAxis >
+       <CategoryAxis side="BOTTOM" />
+     </xAxis>
+     <yAxis>
+       <NumberAxis side="LEFT" />
+     </yAxis>
+   </BarChart>
+
+
+
+
+<!--    <Button text="Hello!" onAction="#onHelloButtonClick"/>-->
+</VBox>

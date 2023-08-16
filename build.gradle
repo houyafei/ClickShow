@@ -1,0 +1,75 @@
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'org.beryx.jlink' version '2.24.1'
+    id 'de.jjohannes.extra-java-module-info' version "0.11"
+
+}
+
+repositories {
+    mavenLocal()
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    mavenCentral()
+}
+
+ext {
+    junitVersion = '5.8.2'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainModule = 'com.lightmatter.clickshow'
+    mainClass = 'com.lightmatter.clickshow.HelloApplication'
+}
+
+javafx {
+    version = '16'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+extraJavaModuleInfo {
+    module("jnativehook-2.1.0.jar", "jnativehook", "2.1.0") {
+        requires("java.logging")
+        requires("java.desktop")
+        exports("org.jnativehook")
+        exports("org.jnativehook.keyboard")
+        exports("org.jnativehook.mouse")
+
+    }
+}
+
+dependencies {
+
+    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
+
+    implementation('com.1stleg:jnativehook:2.1.0')
+    implementation 'org.xerial:sqlite-jdbc:3.41.2.2'
+    compile fileTree(dir: 'libs', includes: ['*.jar'])
+    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+}
+
+test {
+    useJUnitPlatform()
+    modularity.inferModulePath = true
+}
+
+
+
+jlink {
+    imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip")
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'ClickShow'
+    }
+}
+
+jlinkZip {
+    group = 'distribution'
+}
