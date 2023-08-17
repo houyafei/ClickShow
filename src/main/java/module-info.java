@@ -8,6 +8,7 @@ module com.lightmatter.clickshow {
     requires java.logging;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
+    requires shortcutMachine;
     opens com.lightmatter.clickshow to javafx.fxml;
     exports com.lightmatter.clickshow;
 }

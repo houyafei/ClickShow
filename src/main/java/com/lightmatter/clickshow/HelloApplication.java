@@ -1,5 +1,6 @@
 package com.lightmatter.clickshow;
 
+import com.lightmatter.clickshow.autostart.AutoStartControl;
 import com.lightmatter.clickshow.db.ClickDBHelper;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +18,7 @@ import java.util.logging.Logger;
 public class HelloApplication extends Application {
 
     @Override
-    public void start(Stage stage)  {
+    public void start(Stage stage) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
@@ -25,7 +26,7 @@ public class HelloApplication extends Application {
             stage.setTitle("我的今日点击战绩 v 1.0");
             stage.getIcons().add(new Image(HelloApplication.class.getResource("/images/c_128.png").toExternalForm()));
         } catch (IOException e) {
-            System.out.println("----------start--"+e.getMessage());
+            System.out.println("----------start--" + e.getMessage());
             e.printStackTrace();
             throw new RuntimeException(e);
         }
@@ -52,7 +53,13 @@ public class HelloApplication extends Application {
             System.err.println(ex.getMessage());
             System.exit(1);
         }
+        // 初始化数据表
         ClickDBHelper.createTable();
+        // 设置自启动
+        new Thread(() -> {
+            new AutoStartControl().setAutoStart(true);
+        }).start();
+
 
     }
 

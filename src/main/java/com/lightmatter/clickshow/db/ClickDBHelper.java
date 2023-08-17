@@ -15,14 +15,13 @@ public class ClickDBHelper {
         Connection connection = null;
         try {
             // db name is the path to the database file
-            String url = SQLITE_JDBC_URL;
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection(url);
+            connection = DriverManager.getConnection(SQLITE_JDBC_URL);
             System.out.println("Connection established.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } catch (ClassNotFoundException e) {
-            System.out.println("no dql driver");
+            System.out.println("no sql driver");
             throw new RuntimeException(e);
         }
         return connection;
@@ -36,7 +35,7 @@ public class ClickDBHelper {
                 + " create_time timestamp default currenttimestamp \n"
                 + ");";
 
-        try (Statement stmt = ClickDBHelper.connect().createStatement()) {
+        try (Statement stmt = connect().createStatement()) {
             stmt.execute(sql);
         } catch (SQLException e) {
             System.out.println(e.getMessage());

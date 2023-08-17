@@ -1,8 +1,6 @@
 package com.lightmatter.clickshow.model;
 
-import java.sql.Timestamp;
-
-public class ClickStatistic implements Comparable {
+public class ClickStatistic implements Comparable<ClickStatistic> {
 
     private String hourKey;
     private int mouseClickCount;
@@ -64,7 +62,7 @@ public class ClickStatistic implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        return this.getCreateTime().compareTo(((ClickStatistic) o).getCreateTime());
+    public int compareTo(ClickStatistic o) {
+        return this.getCreateTime().compareTo(o.getCreateTime());
     }
 }
