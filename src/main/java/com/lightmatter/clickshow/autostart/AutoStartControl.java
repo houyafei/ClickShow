@@ -1,8 +1,10 @@
 package com.lightmatter.clickshow.autostart;
 
 import java.io.File;
+import java.util.logging.Logger;
 
 public class AutoStartControl {
+    Logger logger = Logger.getLogger(AutoStartControl.class.getPackage().getName());
 
     private ShortCut myShortCut;
 
@@ -16,7 +18,7 @@ public class AutoStartControl {
         boolean result = false;
         if (linkFileName != null) {
             result = setAutoStart(yesAutoStart, linkFileName);
-            System.out.println("setting auto Constants.IS_AUTO_START " + linkFileName + "\n" + "--" + result);
+            logger.info("setting auto Constants.IS_AUTO_START " + linkFileName  + "--" + result);
         }
 
         return result;
@@ -28,7 +30,7 @@ public class AutoStartControl {
         String lnkPath = f.getAbsolutePath();
         String startFolder = "";
         String osName = System.getProperty("os.name");
-        System.out.println("---------------->" + osName);
+        logger.info("osName " +osName);
         if (osName.equals("Windows 7")
                 || osName.equals("Windows 8")
                 || osName.equals("Windows 10")
@@ -62,12 +64,14 @@ public class AutoStartControl {
             if (!file.exists()) {
                 run.exec("cmd /c copy " + formatPath(lnkPath) + " " + formatPath(startFolder));
             } else {
-                System.out.println(" auto start by system already exists, no need reset");
+                logger.info(" auto start by system already exists, no need reset");
+
             }
             // 延迟0.5秒防止复制需要时间
             Thread.sleep(500);
         } catch (Exception e) {
             e.printStackTrace();
+            logger.info(e.getMessage());
             return false;
         }
 

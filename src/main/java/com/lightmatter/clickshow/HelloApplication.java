@@ -12,11 +12,12 @@ import org.jnativehook.NativeHookException;
 
 import java.io.IOException;
 import java.util.logging.Level;
-import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
 public class HelloApplication extends Application {
 
+
+    Logger logger = Logger.getLogger(HelloApplication.class.getPackage().getName());
     @Override
     public void start(Stage stage) {
         try {
@@ -43,9 +44,9 @@ public class HelloApplication extends Application {
     @Override
     public void init() throws Exception {
         super.init();
-        LogManager.getLogManager().reset();
         Logger logger = Logger.getLogger(GlobalScreen.class.getPackage().getName());
         logger.setLevel(Level.OFF);
+
         try {
             GlobalScreen.registerNativeHook();
         } catch (NativeHookException ex) {
@@ -57,7 +58,7 @@ public class HelloApplication extends Application {
         ClickDBHelper.createTable();
         // 设置自启动
         new Thread(() -> {
-            new AutoStartControl().setAutoStart(true);
+            new AutoStartControl().setAutoStart(false);
         }).start();
 
 
@@ -66,7 +67,8 @@ public class HelloApplication extends Application {
     @Override
     public void stop() throws Exception {
         super.stop();
-        System.out.println("---------good bye--------");
+        logger.info("---------good bye--------");
+
         System.exit(1);
     }
 }

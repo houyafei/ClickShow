@@ -51,6 +51,7 @@ dependencies {
 
     implementation('com.1stleg:jnativehook:2.1.0')
     implementation 'org.xerial:sqlite-jdbc:3.41.2.2'
+    implementation 'org.apache.logging.log4j:log4j:2.20.0'
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
