@@ -95,11 +95,10 @@ public class HelloController {
             @Override
             public void nativeMouseClicked(NativeMouseEvent nativeMouseEvent) {
                 super.nativeMouseClicked(nativeMouseEvent);
-                mouseClickCount += 1;
-
                 Platform.runLater(() -> {
                     recordClick(ClickType.MOUSE);
-                    clickMouseText.setText(String.format("* %d *", mouseClickCount));
+                    updateView(ClickType.MOUSE);
+
                 });
 
             }
@@ -116,28 +115,46 @@ public class HelloController {
             @Override
             public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
                 super.nativeKeyReleased(nativeKeyEvent);
-                keyClickCount += 1;
-
                 Platform.runLater(() -> {
                     recordClick(ClickType.KEY);
-                    clickKeyboardText.setText(String.format("* %d *", keyClickCount));
+                    updateView(ClickType.KEY);
                 });
             }
         });
 
     }
 
-    private void recordClick(ClickType clickType) {
+    private void updateView(ClickType clickType) {
         LocalDateTime today = LocalDateTime.now();
         String hour = today.format(DateTimeFormatter.ofPattern("MM-dd HH"));
-
+        String date = hour.substring(0, 6);
         if (clickType == ClickType.MOUSE) {
             recordMoueMap.put(hour, recordMoueMap.getOrDefault(hour, 0) + 1);
             updateBarChart(recordMoueMap, recordMoueList);
+            mouseClickCount = 0;
+            recordMoueMap.forEach((k, v) -> {
+                if (k.substring(0, 6).equals(date)) {
+                    mouseClickCount = mouseClickCount + v;
+                }
+            });
+            clickMouseText.setText(String.format("* %d *", mouseClickCount));
+
         } else {
             recordKeyMap.put(hour, recordKeyMap.getOrDefault(hour, 0) + 1);
             updateBarChart(recordKeyMap, recordKeyList);
+            keyClickCount = 0;
+            recordKeyMap.forEach((k, v) -> {
+                if (k.substring(0, 6).equals(date)) {
+                    keyClickCount = keyClickCount + v;
+                }
+            });
+            clickKeyboardText.setText(String.format("* %d *", keyClickCount));
         }
+    }
+
+    private void recordClick(ClickType clickType) {
+        LocalDateTime today = LocalDateTime.now();
+        String hour = today.format(DateTimeFormatter.ofPattern("MM-dd HH"));
 
         try {
             ClickStatistic data = ClickDBHelper.findByHourKey(hour);
@@ -203,8 +220,6 @@ public class HelloController {
             Tooltip tooltip = new Tooltip("点击次数：" + stringNumberData.getYValue());
             Tooltip.install(stringNumberData.getNode(), tooltip);
         }
-
-
     }
 
 }

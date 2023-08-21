@@ -11,6 +11,7 @@ import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 
 import java.io.IOException;
+import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,7 +26,7 @@ public class HelloApplication extends Application {
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             stage.setScene(scene);
             stage.setTitle("我的今日点击战绩 v 1.0");
-            stage.getIcons().add(new Image(HelloApplication.class.getResource("/images/c_128.png").toExternalForm()));
+            stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("/images/c_128.png"))));
         } catch (IOException e) {
             System.out.println("----------start--" + e.getMessage());
             e.printStackTrace();
@@ -58,7 +59,7 @@ public class HelloApplication extends Application {
         ClickDBHelper.createTable();
         // 设置自启动
         new Thread(() -> {
-            new AutoStartControl().setAutoStart(false);
+            new AutoStartControl().setAutoStart(true);
         }).start();
 
 
