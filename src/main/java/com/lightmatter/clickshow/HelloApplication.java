@@ -58,10 +58,7 @@ public class HelloApplication extends Application {
         // 初始化数据表
         ClickDBHelper.createTable();
         // 设置自启动
-        new Thread(() -> {
-            new AutoStartControl().setAutoStart(true);
-        }).start();
-
+        new Thread(() -> new AutoStartControl().setAutoStart(true)).start();
 
     }
 
