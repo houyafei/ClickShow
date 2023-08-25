@@ -1,33 +1,36 @@
 package com.lightmatter.clickshow.db;
 
 
+import com.lightmatter.clickshow.HelloApplication;
 import com.lightmatter.clickshow.model.ClickStatistic;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ClickDBHelper {
+    private static Logger log = LoggerFactory.getLogger(HelloApplication.class.getName());
 
     private static final String SQLITE_JDBC_URL = "jdbc:sqlite:clickDb.db";
 
     private static Connection connect() {
         Connection connection = null;
         try {
-            // db name is the path to the database file
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection(SQLITE_JDBC_URL);
-            System.out.println("Connection established.");
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        } catch (ClassNotFoundException e) {
-            System.out.println("no sql driver");
+            log.info("Connection established.");
+        } catch (SQLException | ClassNotFoundException e) {
+            log.error("connect error ",e);
             throw new RuntimeException(e);
         }
+
         return connection;
     }
 
-    public static void createTable(){
+    public static void createTable() {
         String sql = "CREATE TABLE IF NOT EXISTS click_statistic (\n"
                 + " hour_key varchar(15) PRIMARY KEY,\n"
                 + " mouse_click_count int default 0,\n"
@@ -35,7 +38,7 @@ public class ClickDBHelper {
                 + " create_time timestamp default currenttimestamp \n"
                 + ");";
 
-        try (Statement stmt = connect().createStatement()) {
+        try (Connection conn = connect(); Statement stmt = conn.createStatement()) {
             stmt.execute(sql);
         } catch (SQLException e) {
             System.out.println(e.getMessage());

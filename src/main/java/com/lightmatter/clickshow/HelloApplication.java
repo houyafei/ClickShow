@@ -11,6 +11,7 @@ import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,24 +19,31 @@ import java.util.logging.Logger;
 public class HelloApplication extends Application {
 
 
-    Logger logger = Logger.getLogger(HelloApplication.class.getPackage().getName());
+    private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HelloApplication.class.getName());
+
     @Override
     public void start(Stage stage) {
+        log.info("----------start-------" + new Date());
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 800, 600);
             stage.setScene(scene);
-            stage.setTitle("我的今日点击战绩 v 1.0");
+            stage.setTitle("我的今日点击战绩 v 1.1");
             stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("/images/c_128.png"))));
         } catch (IOException e) {
-            System.out.println("----------start--" + e.getMessage());
             e.printStackTrace();
+            log.error(e.getMessage(), e);
             throw new RuntimeException(e);
         }
 
 
         stage.setResizable(false);
         stage.show();
+        stage.setOnCloseRequest(event -> {
+            log.info("Minimize the window",event.getEventType());
+            event.consume();
+            stage.setIconified(true);
+        });
     }
 
     public static void main(String[] args) {
@@ -51,8 +59,7 @@ public class HelloApplication extends Application {
         try {
             GlobalScreen.registerNativeHook();
         } catch (NativeHookException ex) {
-            System.err.println("There was a problem registering the native hook.");
-            System.err.println(ex.getMessage());
+            log.error(ex.getMessage(),ex);
             System.exit(1);
         }
         // 初始化数据表
@@ -62,11 +69,11 @@ public class HelloApplication extends Application {
 
     }
 
-    @Override
-    public void stop() throws Exception {
-        super.stop();
-        logger.info("---------good bye--------");
-
-        System.exit(1);
-    }
+// 开启这个，点叉号，可以关闭，否则不关闭。
+//    @Override
+//    public void stop() throws Exception {
+//        super.stop();
+//        log.info("---------good bye--------");
+//        System.exit(1);
+//    }
 }

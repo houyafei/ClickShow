@@ -13,6 +13,7 @@ repositories {
     mavenCentral()
 }
 
+
 ext {
     junitVersion = '5.8.2'
 }
@@ -47,11 +48,10 @@ extraJavaModuleInfo {
 
 dependencies {
 
-    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
-
     implementation('com.1stleg:jnativehook:2.1.0')
-    implementation 'org.xerial:sqlite-jdbc:3.41.2.2'
-    implementation 'org.apache.logging.log4j:log4j:2.20.0'
+    implementation('org.xerial:sqlite-jdbc:3.41.2.2')
+    implementation 'org.slf4j:log4j-over-slf4j:2.0.7'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
     implementation fileTree(dir: 'libs', includes: ['*.jar'])
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
