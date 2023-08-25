@@ -10,6 +10,8 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.keyboard.NativeKeyAdapter;
 import org.jnativehook.keyboard.NativeKeyEvent;
@@ -26,6 +28,7 @@ import java.util.TreeMap;
 
 public class HelloController {
 
+    private static Logger log = LogManager.getLogger(HelloController.class.getName());
 
     private enum ClickType {
         MOUSE, KEY
@@ -68,6 +71,9 @@ public class HelloController {
         });
     }
 
+    /**
+     * 打开时，自动获取当天的点击次数信息，然后初始化一些数据
+     */
     private void initRecordData() {
         // 获今天的点击数据
         List<ClickStatistic> todayData = null;
@@ -102,14 +108,23 @@ public class HelloController {
                 });
 
             }
+
+            @Override
+            public void nativeMousePressed(NativeMouseEvent nativeMouseEvent) {
+                super.nativeMousePressed(nativeMouseEvent);
+            }
+
+            @Override
+            public void nativeMouseReleased(NativeMouseEvent nativeMouseEvent) {
+                super.nativeMouseReleased(nativeMouseEvent);
+            }
         });
 
         GlobalScreen.addNativeKeyListener(new NativeKeyAdapter() {
             @Override
             public void nativeKeyTyped(NativeKeyEvent nativeKeyEvent) {
                 super.nativeKeyTyped(nativeKeyEvent);
-
-                System.out.println(nativeKeyEvent.getKeyChar());
+                log.info(nativeKeyEvent.getKeyChar());
             }
 
             @Override
@@ -152,6 +167,10 @@ public class HelloController {
         }
     }
 
+    /**
+     * 将点击次数信息记录到数据库中
+     * @param clickType 点击类型  MOUSE, KEY
+     */
     private void recordClick(ClickType clickType) {
         LocalDateTime today = LocalDateTime.now();
         String hour = today.format(DateTimeFormatter.ofPattern("MM-dd HH"));
@@ -159,7 +178,7 @@ public class HelloController {
         try {
             ClickStatistic data = ClickDBHelper.findByHourKey(hour);
             if (data != null) {
-                System.out.println(data);
+                log.info(data);
                 if (clickType == ClickType.KEY) {
                     data.setKeyClickCount(data.getKeyClickCount() + 1);
                 } else {
@@ -184,6 +203,9 @@ public class HelloController {
     }
 
 
+    /**
+     * 构造柱状图，用于初始化图标
+     */
     @SuppressWarnings("unchecked")
     public void populateBarChart() {
         // 创建并设置Y坐标轴
@@ -206,7 +228,7 @@ public class HelloController {
             for (XYChart.Data<String, Number> stringNumberData : dataList) {
                 if (stringNumberData.getXValue().equals(k)) {
                     stringNumberData.setYValue(v);
-                    System.out.println("update:" + k + ":" + v);
+                    log.info("update:" + k + ":" + v);
                     isModified = true;
                     break;
                 }
@@ -221,5 +243,4 @@ public class HelloController {
             Tooltip.install(stringNumberData.getNode(), tooltip);
         }
     }
-
 }
