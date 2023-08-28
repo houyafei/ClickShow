@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class HelloApplication extends Application {
 
 
-    private static org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HelloApplication.class.getName());
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HelloApplication.class.getName());
 
     @Override
     public void start(Stage stage) {
@@ -40,7 +40,7 @@ public class HelloApplication extends Application {
         stage.setResizable(false);
         stage.show();
         stage.setOnCloseRequest(event -> {
-            log.info("Minimize the window",event.getEventType());
+            log.info("Minimize the window " + event.getEventType());
             event.consume();
             stage.setIconified(true);
         });

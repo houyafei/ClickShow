@@ -28,7 +28,7 @@ import java.util.TreeMap;
 
 public class HelloController {
 
-    private static Logger log = LoggerFactory.getLogger(HelloController.class.getName());
+    private static final Logger log = LoggerFactory.getLogger(HelloController.class.getName());
 
     private enum ClickType {
         MOUSE, KEY
@@ -76,7 +76,7 @@ public class HelloController {
      */
     private void initRecordData() {
         // 获今天的点击数据
-        List<ClickStatistic> todayData = null;
+        List<ClickStatistic> todayData;
         try {
             todayData = ClickDBHelper.findByCreateTimeRange(Timestamp.valueOf(LocalDate.now().atStartOfDay()),
                     Timestamp.valueOf(LocalDate.now().atStartOfDay().plusDays(1)));
