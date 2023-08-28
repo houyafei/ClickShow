@@ -1,0 +1,295 @@
+2023-08-28 11:25:48.996 [JavaFX-Launcher] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:49.004 [Thread-5] INFO  c.l.clickshow.autostart.ShortCut - D:\D_doc\idea_project\test\ClickShow\.
+2023-08-28 11:25:49.023 [Thread-5] WARN  c.l.clickshow.autostart.ShortCut - not found the exe file ClickShow.exe
+2023-08-28 11:25:49.027 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - ----------start-------Mon Aug 28 11:25:49 CST 2023
+2023-08-28 11:25:49.227 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:56.092 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:56.096 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=102, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:25:56.098 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:56.107 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:25:56.107 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:25:56.112 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:103
+2023-08-28 11:25:56.484 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:56.485 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=103, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:25:56.487 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:56.500 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:25:56.501 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:25:56.501 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:104
+2023-08-28 11:25:57.808 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:57.809 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=104, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:25:57.810 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:57.817 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:25:57.817 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:25:57.818 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:105
+2023-08-28 11:25:57.977 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:57.978 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=105, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:25:57.979 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:25:57.986 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:25:57.986 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:25:57.986 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:106
+2023-08-28 11:26:04.770 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:04.771 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=106, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:04.772 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:04.779 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:04.779 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:04.780 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:107
+2023-08-28 11:26:05.809 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:05.810 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=107, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:05.810 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:05.818 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:05.818 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:05.818 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:108
+2023-08-28 11:26:06.540 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:06.540 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=108, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:06.541 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:06.548 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:06.548 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:06.549 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:109
+2023-08-28 11:26:06.762 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:06.762 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=109, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:06.763 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:06.770 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:06.770 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:06.771 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:110
+2023-08-28 11:26:06.967 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:06.968 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=110, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:06.968 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:06.976 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:06.976 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:06.977 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:111
+2023-08-28 11:26:07.173 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.174 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=111, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:07.174 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:07.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:07.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:112
+2023-08-28 11:26:07.358 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.359 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=112, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:07.359 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.366 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:07.366 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:07.366 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:113
+2023-08-28 11:26:07.523 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.523 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=113, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:07.523 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.530 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:07.530 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:07.530 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:114
+2023-08-28 11:26:07.705 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.706 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=114, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:07.706 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.711 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:07.712 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:07.712 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:115
+2023-08-28 11:26:07.905 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.906 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=115, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:07.906 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:07.914 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:07.914 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:07.915 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:116
+2023-08-28 11:26:08.339 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:08.339 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=116, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:08.340 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:08.348 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:08.349 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:08.349 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:117
+2023-08-28 11:26:10.004 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:10.005 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=117, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:10.006 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:10.014 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:10.014 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:10.014 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:118
+2023-08-28 11:26:11.660 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:11.660 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=118, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:11.661 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:11.670 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:11.670 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:11.671 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:119
+2023-08-28 11:26:11.873 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:11.874 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=119, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:11.874 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:11.882 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:11.882 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:11.882 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:120
+2023-08-28 11:26:15.173 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:15.174 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=120, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:15.174 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:15.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:15.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:15.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:121
+2023-08-28 11:26:19.242 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:19.243 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=121, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:19.244 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:19.253 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:19.253 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:19.253 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:122
+2023-08-28 11:26:19.585 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:19.586 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=122, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:19.587 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:19.597 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:19.597 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:19.598 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:123
+2023-08-28 11:26:22.423 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:22.424 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=123, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:22.425 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:22.433 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:22.433 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:22.433 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:124
+2023-08-28 11:26:23.399 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:23.400 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=124, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:23.400 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:23.408 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:23.409 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:23.409 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:125
+2023-08-28 11:26:24.568 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:24.568 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=125, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:24.569 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:24.576 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:26:24.577 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:26:24.577 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:126
+2023-08-28 11:26:25.840 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:26:25.840 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=126, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:26:25.841 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:28:31.502 [JavaFX-Launcher] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:28:31.508 [Thread-5] INFO  c.l.clickshow.autostart.ShortCut - D:\D_doc\idea_project\test\ClickShow\.
+2023-08-28 11:28:31.530 [Thread-5] WARN  c.l.clickshow.autostart.ShortCut - not found the exe file ClickShow.exe
+2023-08-28 11:28:31.533 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - ----------start-------Mon Aug 28 11:28:31 CST 2023
+2023-08-28 11:28:31.763 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:28:35.168 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:28:35.173 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=126, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:28:35.173 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:28:35.181 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:28:35.181 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:28:35.184 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:127
+2023-08-28 11:28:53.069 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:28:53.069 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=127, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:28:53.070 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:28:53.078 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:28:53.078 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:28:53.079 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:128
+2023-08-28 11:29:01.109 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:01.110 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=128, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:01.110 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:01.118 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:01.118 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:01.118 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:129
+2023-08-28 11:29:01.725 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:01.726 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=129, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:01.726 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:01.732 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:01.732 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:01.732 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:130
+2023-08-28 11:29:03.538 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:03.539 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=130, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:03.540 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:03.548 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:03.548 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:03.548 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:131
+2023-08-28 11:29:04.241 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:04.242 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=131, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:04.242 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:04.250 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:04.250 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:04.250 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:132
+2023-08-28 11:29:04.477 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:04.478 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=132, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:04.478 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:04.486 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:04.486 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:04.486 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:133
+2023-08-28 11:29:04.724 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:04.725 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=133, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:04.725 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:04.734 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:04.734 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:04.734 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:134
+2023-08-28 11:29:05.544 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:05.544 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=134, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:05.545 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:05.552 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:05.552 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:05.552 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:135
+2023-08-28 11:29:44.363 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:44.363 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=135, keyClickCount=128, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:44.364 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:44.372 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:44.372 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:2
+2023-08-28 11:29:44.372 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:129
+2023-08-28 11:29:45.134 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:45.135 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=135, keyClickCount=129, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:45.135 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:45.142 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:45.143 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:2
+2023-08-28 11:29:45.143 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:130
+2023-08-28 11:29:51.097 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:51.098 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=135, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:51.099 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:51.107 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:51.107 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:51.107 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:136
+2023-08-28 11:29:53.488 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:53.489 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=136, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:53.490 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:57.188 [JavaFX-Launcher] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:57.192 [Thread-4] INFO  c.l.clickshow.autostart.ShortCut - D:\D_doc\idea_project\test\ClickShow\.
+2023-08-28 11:29:57.210 [Thread-4] WARN  c.l.clickshow.autostart.ShortCut - not found the exe file ClickShow.exe
+2023-08-28 11:29:57.213 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - ----------start-------Mon Aug 28 11:29:57 CST 2023
+2023-08-28 11:29:57.400 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:59.624 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:59.633 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=136, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:59.634 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:59.642 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:59.642 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:59.644 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:137
+2023-08-28 11:29:59.829 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:59.830 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=137, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:29:59.831 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:29:59.838 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:29:59.838 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:29:59.838 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:138
+2023-08-28 11:30:00.013 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.014 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=138, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:00.015 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.022 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:30:00.022 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:30:00.022 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:139
+2023-08-28 11:30:00.175 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.176 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=139, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:00.177 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:30:00.183 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:30:00.184 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:140
+2023-08-28 11:30:00.328 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.329 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=140, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:00.330 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.339 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:30:00.340 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:30:00.341 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:141
+2023-08-28 11:30:00.516 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.516 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=141, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:00.517 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.525 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:30:00.525 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:30:00.525 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:142
+2023-08-28 11:30:00.712 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.714 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=142, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:00.715 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.721 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:30:00.721 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:30:00.721 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:143
+2023-08-28 11:30:00.875 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.876 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=143, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:00.877 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:00.885 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:30:00.885 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:30:00.886 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:144
+2023-08-28 11:30:02.721 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Minimize the window
+2023-08-28 11:30:02.735 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:02.736 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=144, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:02.737 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:02.745 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 09:38
+2023-08-28 11:30:02.745 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 10:37
+2023-08-28 11:30:02.746 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - update:08-28 11:145
+2023-08-28 11:30:05.533 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
+2023-08-28 11:30:05.533 [JavaFX Application Thread] INFO  c.l.clickshow.HelloController - ClickStatistic{hourKey='08-28 11', mouseClickCount=145, keyClickCount=130, createTime=2023-08-28 11:06:24.891}
+2023-08-28 11:30:05.534 [JavaFX Application Thread] INFO  c.l.clickshow.HelloApplication - Connection established.
