@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10" style="-fx-background-color: #ebfbf7;" xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lightmatter.clickshow.SettingController">
+    <padding>
+        <Insets bottom="20.0"/>
+    </padding>
+    <TabPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #abced8;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+
+            <Tab text="查询过往数据">
+                <content>
+                    <VBox alignment="CENTER">
+                        <padding>
+                            <Insets bottom="10.0" top="15.0"/>
+                        </padding>
+                        <children>
+                            <Label style="-fx-font-size: 25px;">历史点击数据查询</Label>
+                            <HBox prefHeight="65.0" prefWidth="345.0" alignment="CENTER" spacing="10">
+
+                                <Label text="开始时间">
+                                </Label>
+                                <DatePicker fx:id="startDate"/>
+                                <Label text="截止时间">
+                                </Label>
+                                <DatePicker fx:id="endData"/>
+                                <Button fx:id="searchBut" onAction="#goSearch">
+                                    <graphic>
+                                        <ImageView fitHeight="22.0" fitWidth="24.0">
+                                            <image>
+                                                <Image url="@../../../images/search.png"/>
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+
+                            </HBox>
+                            <LineChart prefHeight="371.0" prefWidth="600.0" fx:id="lineChart">
+                                <xAxis>
+                                    <CategoryAxis side="BOTTOM" fx:id="myXAxis"/>
+                                </xAxis>
+                                <yAxis>
+                                    <NumberAxis side="LEFT" fx:id="myYAxis"/>
+                                </yAxis>
+                            </LineChart>
+                        </children>
+                    </VBox>
+
+                </content>
+            </Tab>
+            <Tab text="设置">
+                <content>
+                    <VBox alignment="TOP_LEFT">
+                        <padding>
+                            <Insets bottom="20.0" left="20" right="20" top="20"/>
+                        </padding>
+                        <RadioButton fx:id="autoStartToggle" text="开启自启动"/>
+                        <Text text="这是记录鼠标和键盘的点击次数的。" wrappingWidth="541.0">
+                            <font>
+                                <Font name="YouYuan" size="15.0"/>
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="15.0"/>
+                            </VBox.margin>
+                        </Text>
+                        <ImageView fx:id="textImage" fitHeight="150.0" fitWidth="200.0" layoutX="231.0" layoutY="101.0"
+                                   pickOnBounds="true" preserveRatio="true" onMouseClicked="#closeWind">
+                            <image>
+                                <Image url="@../../../images/icon_128.png"/>
+                            </image>
+                        </ImageView>
+                    </VBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
+
+
+    <Button onAction="#goBackMainButtonAction" text="返回"/>
+
+
+</VBox>

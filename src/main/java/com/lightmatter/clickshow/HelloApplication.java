@@ -19,15 +19,20 @@ import java.util.logging.Logger;
 public class HelloApplication extends Application {
 
 
+    public static Stage primaryStage;
+    public static Scene scene1,scene2;
+
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HelloApplication.class.getName());
 
     @Override
     public void start(Stage stage) {
+        primaryStage = stage;
         log.info("----------start-------" + new Date());
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-            stage.setScene(scene);
+            scene1 = new Scene(fxmlLoader.load(), 800, 600);
+
+            stage.setScene(scene1);
             stage.setTitle("我的今日点击战绩 v 1.1");
             stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("/images/c_128.png"))));
         } catch (IOException e) {
@@ -69,11 +74,4 @@ public class HelloApplication extends Application {
 
     }
 
-// 开启这个，点叉号，可以关闭，否则不关闭。
-//    @Override
-//    public void stop() throws Exception {
-//        super.stop();
-//        log.info("---------good bye--------");
-//        System.exit(1);
-//    }
 }
