@@ -54,15 +54,9 @@
             </padding>
 
             <Label style="-fx-font-size: 24px;" text="今日：鼠标点击次数" />
-            <Label fx:id="clickMouseText" style="-fx-font-size: 24px;" text=" 0 " textFill="#15e442">
-                <font>
-                    <Font size="30.0" />
-                </font></Label>
+            <Label fx:id="clickMouseText" style="-fx-font-size: 30px;" text=" 0 " textFill="#059026"/>
             <Label style="-fx-font-size: 24px;" text="键盘点击次数" />
-            <Label fx:id="clickKeyboardText" style="-fx-font-size: 24px;" text=" 0 " textFill="#15e442">
-                <font>
-                    <Font size="30.0" />
-                </font></Label>
+            <Label fx:id="clickKeyboardText" style="-fx-font-size: 30px;" text=" 0 " textFill="#059026"/>
 
         </HBox>
         <!--    查看昨天数据-->

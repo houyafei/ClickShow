@@ -44,10 +44,10 @@
                             </HBox>
                             <LineChart prefHeight="371.0" prefWidth="600.0" fx:id="lineChart">
                                 <xAxis>
-                                    <CategoryAxis side="BOTTOM" fx:id="myXAxis"/>
+                                    <CategoryAxis side="BOTTOM" />
                                 </xAxis>
                                 <yAxis>
-                                    <NumberAxis side="LEFT" fx:id="myYAxis"/>
+                                    <NumberAxis side="LEFT"/>
                                 </yAxis>
                             </LineChart>
                         </children>
@@ -62,7 +62,7 @@
                             <Insets bottom="20.0" left="20" right="20" top="20"/>
                         </padding>
                         <RadioButton fx:id="autoStartToggle" text="开启自启动"/>
-                        <Text text="这是记录鼠标和键盘的点击次数的。" wrappingWidth="541.0">
+                        <Text text="这是记录鼠标和键盘的点击次数的。" style="-fx-font-size: 24px;" wrappingWidth="541.0">
                             <font>
                                 <Font name="YouYuan" size="15.0"/>
                             </font>
@@ -73,7 +73,7 @@
                         <ImageView fx:id="textImage" fitHeight="150.0" fitWidth="200.0" layoutX="231.0" layoutY="101.0"
                                    pickOnBounds="true" preserveRatio="true" onMouseClicked="#closeWind">
                             <image>
-                                <Image url="@../../../images/icon_128.png"/>
+                                <Image url="@../../../images/close.png"/>
                             </image>
                         </ImageView>
                     </VBox>

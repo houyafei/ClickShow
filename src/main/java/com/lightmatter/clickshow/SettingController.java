@@ -38,9 +38,6 @@ public class SettingController {
     private final TreeMap<String, Integer> recordMoueMap = new TreeMap<>();
     private final TreeMap<String, Integer> recordKeyMap = new TreeMap<>();
 
-    private final ArrayList<XYChart.Data<String, Number>> recordMoueList = new ArrayList<>();
-    private final ArrayList<XYChart.Data<String, Number>> recordKeyList = new ArrayList<>();
-    public CategoryAxis myXAxis;
 
 
     public DatePicker startDate;
@@ -59,11 +56,11 @@ public class SettingController {
         endData.setValue(end);
 
         initData();
-        populateBarChart();
+        populateLineChart();
     }
 
     private void initData() {
-        // 获今天的点击数据
+        // 获历史点击数据
         queryHistoryData();
     }
 
@@ -81,27 +78,16 @@ public class SettingController {
         }
     }
 
-    public void goSearch(ActionEvent actionEvent) throws InterruptedException {
+    public void goSearch(ActionEvent actionEvent) {
         start = startDate.getValue();
         end = endData.getValue();
 
         recordMoueMap.clear();
         recordKeyMap.clear();
-        recordMoueList.clear();
-        recordKeyList.clear();
 
         queryHistoryData();
 
-//        updateLineChart(recordMoueMap, recordMoueList);
-//        updateLineChart(recordKeyMap, recordKeyList);
-//        mouseSeries.getData().clear();
-//        keySeries.getData().clear();
-//        mouseSeries.getData().addAll(recordMoueList);
-//        keySeries.getData().addAll(recordKeyList);
-////
-//        lineChart.getData().clear();
-//        lineChart.getData().addAll(mouseSeries, keySeries);
-        populateBarChart();
+        populateLineChart();
 
 
     }
@@ -123,11 +109,10 @@ public class SettingController {
     }
 
     /**
-     * 构造柱状图，用于初始化图标
+     * 构造线形图
      */
     @SuppressWarnings("unchecked")
-    public void populateBarChart() {
-//        lineChart.getData().clear();
+    public void populateLineChart() {
         // 创建并设置Y坐标轴
         XYChart.Series<String, Number> mouseSeries = new XYChart.Series<>();
         XYChart.Series<String, Number> keySeries = new XYChart.Series<>();
@@ -135,12 +120,8 @@ public class SettingController {
         mouseSeries.setName("鼠标点击次数");
         keySeries.setName("键盘点击次数");
 
-//        updateLineChart(recordMoueMap, recordMoueList);
-//        updateLineChart(recordKeyMap, recordKeyList);
         updateLineChart2(recordMoueMap, mouseSeries);
         updateLineChart2(recordKeyMap, keySeries);
-//        mouseSeries.getData().addAll(recordMoueList);
-//        keySeries.getData().addAll(recordKeyList);
         lineChart.setAnimated(false);
         lineChart.getData().clear();
         lineChart.getData().addAll(mouseSeries, keySeries);

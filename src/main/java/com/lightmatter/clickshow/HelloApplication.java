@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
             scene1 = new Scene(fxmlLoader.load(), 800, 600);
 
             stage.setScene(scene1);
-            stage.setTitle("我的今日点击战绩 v 1.1");
+            stage.setTitle("我的今日点击战绩 v 1.2");
             stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("/images/c_128.png"))));
         } catch (IOException e) {
             e.printStackTrace();
