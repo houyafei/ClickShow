@@ -1,10 +1,14 @@
 package com.lightmatter.clickshow;
 
+import com.lightmatter.clickshow.autostart.AutoStartControl;
 import com.lightmatter.clickshow.db.ClickDBHelper;
 import com.lightmatter.clickshow.model.ClickStatistic;
+import com.lightmatter.clickshow.model.Configuration;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,9 +16,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.Tooltip;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
@@ -23,6 +25,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -44,7 +47,9 @@ public class SettingController {
     public DatePicker endData;
     @FXML
     public LineChart lineChart;
-    public NumberAxis myYAxis;
+    public CheckBox autoStart;
+
+    private boolean checkAutoStart = false;
 
     private LocalDate start, end;
 
@@ -57,11 +62,28 @@ public class SettingController {
 
         initData();
         populateLineChart();
+
     }
 
     private void initData() {
         // 获历史点击数据
         queryHistoryData();
+        // 获取配置数据
+        queryConfig();
+
+    }
+
+    private void queryConfig() {
+        try {
+            Configuration autoConfig =  ClickDBHelper.findByConfigType("autoStart");
+            checkAutoStart = Boolean.parseBoolean(autoConfig.getConfigValue());
+            autoStart.setSelected(checkAutoStart);
+            // 设置自启动
+            new Thread(() -> new AutoStartControl().setAutoStart(checkAutoStart)).start();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     public void goBackMainButtonAction(ActionEvent actionEvent) {
@@ -141,5 +163,16 @@ public class SettingController {
 
     public void closeWind(MouseEvent mouseEvent) {
         System.exit(1);
+    }
+
+    public void openSettingTab(Event event) {
+        autoStart.setSelected(checkAutoStart);
+    }
+
+    public void updateCheckBoxStatus(ActionEvent actionEvent) throws SQLException {
+        checkAutoStart = autoStart.isSelected();
+        ClickDBHelper.updateConfigValueByConfigType("autoStart",String.valueOf(checkAutoStart));
+        // 设置自启动
+        new Thread(() -> new AutoStartControl().setAutoStart(checkAutoStart)).start();
     }
 }

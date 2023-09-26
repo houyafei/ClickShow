@@ -3,6 +3,7 @@ package com.lightmatter.clickshow.db;
 
 import com.lightmatter.clickshow.HelloApplication;
 import com.lightmatter.clickshow.model.ClickStatistic;
+import com.lightmatter.clickshow.model.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -43,6 +44,21 @@ public class ClickDBHelper {
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    public static void createConfigTable() {
+        String sql ="CREATE TABLE IF NOT EXISTS configurations (\n" +
+                "    id INT AUTO_INCREMENT PRIMARY KEY,\n" +
+                "    config_type VARCHAR(255) NOT NULL,\n" +
+                "    config_value VARCHAR(255) NOT NULL\n" +
+                ");\n";
+
+        try (Connection conn = connect(); Statement stmt = conn.createStatement()) {
+            stmt.execute(sql);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+
     }
 
     public static void insert(ClickStatistic clickStatistic) throws Exception {
@@ -101,6 +117,59 @@ public class ClickDBHelper {
             }
         }
         return statisticsList;
+    }
+
+
+    // 根据config_type查询配置
+    public static Configuration findByConfigType(String configType) throws SQLException {
+        String sql = "SELECT * FROM configurations WHERE config_type = ?";
+        try (Connection conn = connect(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, configType);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return new Configuration(rs.getInt("id"), rs.getString("config_type"), rs.getString("config_value"));
+                }
+            }
+        }
+        return null;
+    }
+
+    // 根据config_type更新配置值
+    public static boolean updateConfigValueByConfigType(String configType, String newValue) throws SQLException {
+        String sql = "UPDATE configurations SET config_value = ? WHERE config_type = ?";
+        try (Connection conn = connect(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, newValue);
+            stmt.setString(2, configType);
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+        }
+    }
+
+    public static boolean upsertAutoStartConfig( String configValue) throws SQLException {
+        String sql = "INSERT INTO configurations (config_type, config_value) VALUES ('autoStart', ?) " +
+                "ON DUPLICATE KEY UPDATE config_value = VALUES(config_value)";
+        try (Connection conn = connect(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, configValue);
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+        }
+    }
+
+    public static boolean addAutoStartIfNotExists(String configValue) throws SQLException {
+        // 首先检查是否存在 config_type = 'autoStart' 的配置
+        Configuration existingConfig = findByConfigType( "autoStart");
+        if (existingConfig != null) {
+            // 如果已存在，不进行任何操作，并返回 false
+            return false;
+        }
+
+        // 如果不存在，插入新的记录
+        String sql = "INSERT INTO configurations (config_type, config_value) VALUES ('autoStart', ?)";
+        try (Connection conn = connect();PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, configValue);
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0;
+        }
     }
 
 
