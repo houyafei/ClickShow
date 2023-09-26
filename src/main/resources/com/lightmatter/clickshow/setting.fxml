@@ -23,7 +23,7 @@
                         </padding>
                         <children>
                             <Label style="-fx-font-size: 25px;">历史点击数据查询</Label>
-                            <HBox prefHeight="65.0" prefWidth="345.0" alignment="CENTER" spacing="10">
+                            <HBox alignment="CENTER" prefHeight="65.0" prefWidth="345.0" spacing="10">
 
                                 <Label text="开始时间">
                                 </Label>
@@ -42,9 +42,9 @@
                                 </Button>
 
                             </HBox>
-                            <LineChart prefHeight="371.0" prefWidth="600.0" fx:id="lineChart">
+                            <LineChart fx:id="lineChart" prefHeight="371.0" prefWidth="600.0">
                                 <xAxis>
-                                    <CategoryAxis side="BOTTOM" />
+                                    <CategoryAxis side="BOTTOM"/>
                                 </xAxis>
                                 <yAxis>
                                     <NumberAxis side="LEFT"/>
@@ -55,14 +55,14 @@
 
                 </content>
             </Tab>
-            <Tab text="设置">
+            <Tab text="设置" onSelectionChanged="#openSettingTab">
                 <content>
                     <VBox alignment="TOP_LEFT">
                         <padding>
                             <Insets bottom="20.0" left="20" right="20" top="20"/>
                         </padding>
-                        <RadioButton fx:id="autoStartToggle" text="开启自启动"/>
-                        <Text text="这是记录鼠标和键盘的点击次数的。" style="-fx-font-size: 24px;" wrappingWidth="541.0">
+                        <CheckBox fx:id="autoStart" style="-fx-font-size: 24px;" text="开启自启动" onAction="#updateCheckBoxStatus"/>
+                        <Text style="-fx-font-size: 24px;" text="这是记录鼠标和键盘的点击次数的。" wrappingWidth="541.0">
                             <font>
                                 <Font name="YouYuan" size="15.0"/>
                             </font>
@@ -71,7 +71,7 @@
                             </VBox.margin>
                         </Text>
                         <ImageView fx:id="textImage" fitHeight="150.0" fitWidth="200.0" layoutX="231.0" layoutY="101.0"
-                                   pickOnBounds="true" preserveRatio="true" onMouseClicked="#closeWind">
+                                   onMouseClicked="#closeWind" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../images/close.png"/>
                             </image>

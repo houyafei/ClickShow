@@ -20,7 +20,7 @@ public class HelloApplication extends Application {
 
 
     public static Stage primaryStage;
-    public static Scene scene1,scene2;
+    public static Scene scene1, scene2;
 
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HelloApplication.class.getName());
 
@@ -33,7 +33,7 @@ public class HelloApplication extends Application {
             scene1 = new Scene(fxmlLoader.load(), 800, 600);
 
             stage.setScene(scene1);
-            stage.setTitle("我的今日点击战绩 v 1.2");
+            stage.setTitle("我的今日点击战绩 v 2.0");
             stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("/images/c_128.png"))));
         } catch (IOException e) {
             e.printStackTrace();
@@ -64,13 +64,13 @@ public class HelloApplication extends Application {
         try {
             GlobalScreen.registerNativeHook();
         } catch (NativeHookException ex) {
-            log.error(ex.getMessage(),ex);
+            log.error(ex.getMessage(), ex);
             System.exit(1);
         }
         // 初始化数据表
         ClickDBHelper.createTable();
-        // 设置自启动
-        new Thread(() -> new AutoStartControl().setAutoStart(true)).start();
+        ClickDBHelper.createConfigTable();
+        ClickDBHelper.addAutoStartIfNotExists(String.valueOf(true));
 
     }
 

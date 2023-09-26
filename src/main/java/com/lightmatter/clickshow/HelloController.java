@@ -12,9 +12,6 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Tooltip;
-import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import org.jnativehook.GlobalScreen;
@@ -32,12 +29,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 import java.util.TreeMap;
 
 public class HelloController {
 
     private static final Logger log = LoggerFactory.getLogger(HelloController.class.getName());
+    public static final String MM_DD_HH = "MM-dd HH";
     public Button more;
 
 
@@ -52,8 +49,11 @@ public class HelloController {
 
     private final TreeMap<String, Integer> recordMoueMap = new TreeMap<>();
     private final TreeMap<String, Integer> recordKeyMap = new TreeMap<>();
-    private XYChart.Series<String, Number> mouseSeries = new XYChart.Series<>();
-    private XYChart.Series<String, Number> keySeries = new XYChart.Series<>();
+
+    private final ObservableList<XYChart.Data<String, Number>> recordMoueList = FXCollections.observableArrayList();
+    private final ObservableList<XYChart.Data<String, Number>> recordKeyList = FXCollections.observableArrayList();
+
+
     @FXML
     private Label clickKeyboardText, otherClickKeyboardText;
 
@@ -63,6 +63,8 @@ public class HelloController {
 
     @FXML
     private BarChart<String, Number> barChart;
+    private XYChart.Series<String, Number> mouseSeries = new XYChart.Series<>();
+    private XYChart.Series<String, Number> keySeries = new XYChart.Series<>();
 
     @FXML
     public void initialize() {
@@ -114,9 +116,11 @@ public class HelloController {
                     Timestamp.valueOf(LocalDate.now().atStartOfDay())
             );
         } catch (Exception e) {
-            log.error("query data error"+e);
+            log.error("query data error" + e);
             e.printStackTrace();
-            throw new RuntimeException(e);
+            yesterday = LocalDate.now();
+            return;
+//            throw new RuntimeException(e);
         }
 
         for (ClickStatistic clickStatistic : yesterdayData) {
@@ -134,8 +138,8 @@ public class HelloController {
             @Override
             public void nativeMouseClicked(NativeMouseEvent nativeMouseEvent) {
                 super.nativeMouseClicked(nativeMouseEvent);
+                recordClick(ClickType.MOUSE);
                 Platform.runLater(() -> {
-                    recordClick(ClickType.MOUSE);
                     updateView(ClickType.MOUSE);
 
                 });
@@ -162,22 +166,22 @@ public class HelloController {
             @Override
             public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
                 super.nativeKeyReleased(nativeKeyEvent);
+                recordClick(ClickType.KEY);
                 Platform.runLater(() -> {
-                    recordClick(ClickType.KEY);
                     updateView(ClickType.KEY);
                 });
             }
         });
-
     }
 
     private void updateView(ClickType clickType) {
         LocalDateTime today = LocalDateTime.now();
-        String hour = today.format(DateTimeFormatter.ofPattern("MM-dd HH"));
+        String hour = today.format(DateTimeFormatter.ofPattern(MM_DD_HH));
         String date = hour.substring(0, 6);
+
         if (clickType == ClickType.MOUSE) {
             recordMoueMap.put(hour, recordMoueMap.getOrDefault(hour, 0) + 1);
-            updateBarChart2(recordMoueMap, mouseSeries);
+            updateBarChart(recordMoueMap, recordMoueList);
             mouseClickCount = 0;
             recordMoueMap.forEach((k, v) -> {
                 if (k.substring(0, 6).equals(date)) {
@@ -188,7 +192,8 @@ public class HelloController {
 
         } else {
             recordKeyMap.put(hour, recordKeyMap.getOrDefault(hour, 0) + 1);
-            updateBarChart2(recordKeyMap, keySeries);
+            updateBarChart(recordKeyMap, recordKeyList);
+
             keyClickCount = 0;
             recordKeyMap.forEach((k, v) -> {
                 if (k.substring(0, 6).equals(date)) {
@@ -197,11 +202,12 @@ public class HelloController {
             });
             clickKeyboardText.setText(String.format("* %d *", keyClickCount));
         }
-        if (yesterday.equals(LocalDate.now().minusDays(1))){
+
+        if (!yesterday.equals(LocalDate.now().minusDays(1))) {
             initYesterdayDataView();
-            System.out.println("--------------------->");
         }
     }
+
 
     /**
      * 将点击次数信息记录到数据库中
@@ -210,12 +216,11 @@ public class HelloController {
      */
     private void recordClick(ClickType clickType) {
         LocalDateTime today = LocalDateTime.now();
-        String hour = today.format(DateTimeFormatter.ofPattern("MM-dd HH"));
+        String hour = today.format(DateTimeFormatter.ofPattern(MM_DD_HH));
 
         try {
             ClickStatistic data = ClickDBHelper.findByHourKey(hour);
             if (data != null) {
-                log.info(String.valueOf(data));
                 if (clickType == ClickType.KEY) {
                     data.setKeyClickCount(data.getKeyClickCount() + 1);
                 } else {
@@ -260,36 +265,41 @@ public class HelloController {
      */
     @SuppressWarnings("unchecked")
     public void populateBarChart() {
-        // 创建并设置Y坐标轴
+
         mouseSeries.setName("鼠标点击次数");
         keySeries.setName("键盘点击次数");
-
-        updateBarChart2(recordMoueMap, mouseSeries);
-        updateBarChart2(recordKeyMap, keySeries);
+        mouseSeries.setData(recordMoueList);
+        keySeries.setData(recordKeyList);
+        updateBarChart(recordKeyMap, recordKeyList);
+        updateBarChart(recordMoueMap, recordMoueList);
         barChart.getData().addAll(mouseSeries, keySeries);
+
     }
 
-    @SuppressWarnings("unchecked")
-    private  void updateBarChart2(TreeMap<String, Integer> record, XYChart.Series<String, Number> mouseSeries) {
+    private void updateBarChart(TreeMap<String, Integer> record, ObservableList<XYChart.Data<String, Number>> recordList) {
+
         record.forEach((k, v) -> {
-            boolean isModified = true;
-            for (XYChart.Data<String, Number> stringNumberData : mouseSeries.getData()) {
-                if (stringNumberData.getXValue().equals(k) ) {
-                    if(stringNumberData.getYValue().equals(v)){
-                        isModified = false;
-                        break;
+            boolean isNew = true;
+            for (XYChart.Data<String, Number> data : recordList) {
+                if (data.getXValue().equals(k)) {
+                    if (data.getYValue().intValue() != v) {
+                        data.setYValue(v);
+                        ((Text) ((StackPane) data.getNode()).getChildren().get(0)).setText(v.toString());
                     }
+                    isNew = false;
+                    break;
                 }
             }
-            if (isModified) {
+            if (isNew) {
                 XYChart.Data<String, Number> data = new XYChart.Data<>(k, v);
                 StackPane stackPane = new StackPane();
                 Text dataLabel = new Text(v.toString());
                 stackPane.getChildren().add(dataLabel);
                 data.setNode(stackPane);
                 dataLabel.setTranslateY(-10);
-                mouseSeries.getData().add(data);
+                recordList.add(data);
             }
         });
+        barChart.layout();
     }
 }
