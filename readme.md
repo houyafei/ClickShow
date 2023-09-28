@@ -1,3 +1,5 @@
+[![Security Status](https://www.murphysec.com/platform3/v31/badge/1707222073700302848.svg)](https://www.murphysec.com/console/report/1707222073331204096/1707222073700302848)
+
 ## 1、说明
 
 该程序实现了自动记录鼠标和键盘的点击次数。
