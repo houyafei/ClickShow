@@ -92,7 +92,7 @@ public class HelloController {
         // 获今天的点击数据
         List<ClickStatistic> todayData;
         try {
-            todayData = ClickDBHelper.findByCreateTimeRange(Timestamp.valueOf(LocalDateTime.now().minusMinutes(5)),
+            todayData = ClickDBHelper.findByCreateTimeRange(Timestamp.valueOf(LocalDate.now().atStartOfDay()),
                     Timestamp.valueOf(LocalDate.now().atStartOfDay().plusDays(1)));
         } catch (Exception e) {
             throw new RuntimeException(e);
