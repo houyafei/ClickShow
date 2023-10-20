@@ -86,6 +86,8 @@ public class SettingController {
 
     }
 
+
+
     public void goBackMainButtonAction(ActionEvent actionEvent) {
         try {
             if (HelloApplication.scene1 == null) {
@@ -135,6 +137,9 @@ public class SettingController {
      */
     @SuppressWarnings("unchecked")
     public void populateLineChart() {
+        if (recordKeyMap.isEmpty() || recordMoueMap.isEmpty()){
+            return;
+        }
         // 创建并设置Y坐标轴
         XYChart.Series<String, Number> mouseSeries = new XYChart.Series<>();
         XYChart.Series<String, Number> keySeries = new XYChart.Series<>();
